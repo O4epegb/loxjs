@@ -1,0 +1,38 @@
+{
+  "name": "lox-js",
+  "version": "1.0.0",
+  "description": "Lox.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "build:dev": "",
+    "lint": "tslint --fix \"./src/**/*.ts{,x}\"",
+    "prettier": "prettier --single-quote --tab-width 4 --write \"./src/**/*.ts{,x}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts{,x}": [
+      "tslint",
+      "prettier --single-quote --tab-width 4 --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@danila/tslint-config": "^1.0.1",
+    "@types/node": "^10.12.10",
+    "cross-env": "^5.2.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}
